@@ -1,7 +1,12 @@
 import { defineConfig } from 'dumi';
-import path from 'path';
 
 export default defineConfig({
+  resolve: {
+    atomDirs:[{
+      type: 'component',
+      dir: 'src/components'
+    }]
+  },
   outputPath: 'docs-dist',
   themeConfig: {
     name: '@utopia/react-design-core',
