@@ -1,5 +1,9 @@
 import { defineConfig } from 'father';
 
 export default defineConfig({
-  esm: { output: 'dist' },
+  esm: { output: 'es' },
+  cjs: { output: 'lib' },
+  umd: {
+    name: 'RDC'
+  }
 });

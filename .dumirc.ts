@@ -1,14 +1,10 @@
 import { defineConfig } from 'dumi';
 
 export default defineConfig({
-  resolve: {
-    atomDirs:[{
-      type: 'component',
-      dir: 'src/components'
-    }]
-  },
   outputPath: 'docs-dist',
   themeConfig: {
-    name: '@utopia/react-design-core',
+    name: 'core',
+    footer: '<div>Made with <span style="color: rgb(255, 255, 255);">❤</span> by <a target="_blank" rel="noopener noreferrer" href="https://github.com/utopiajs">Utopia</a></div>'
   },
+  styles: ['/styles/reset.css']
 });
