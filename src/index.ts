@@ -1,1 +1,2 @@
-export { default as CopyRight } from './components/copy-right';
+export { default as CopyRight } from './copy-right';
+export { default as Layout } from './layout';
