@@ -1,0 +1,44 @@
+@font-face {
+  font-weight: normal;
+  font-family: PuHuiTi;
+  src: url('//at.alicdn.com/t/webfont_6e11e43nfj.woff2') format('woff2'), url('//at.alicdn.com/t/webfont_6e11e43nfj.woff') format('woff'), url('//at.alicdn.com/t/webfont_6e11e43nfj.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: PuHuiTi;
+  src: url('//at.alicdn.com/t/webfont_exesdog9toj.woff2') format('woff2'), url('//at.alicdn.com/t/webfont_exesdog9toj.woff') format('woff'), url('//at.alicdn.com/t/webfont_exesdog9toj.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 900;
+  font-family: 'AliPuHui';
+  src: url('//at.alicdn.com/wf/webfont/exMpJIukiCms/Gsw2PSKrftc1yNWMNlXgw.woff2') format('woff2'), url('//at.alicdn.com/wf/webfont/exMpJIukiCms/vtu73by4O2gEBcvBuLgeu.woff') format('woff');
+  font-display: swap;
+}
+
+html {
+  direction: initial;
+}
+
+html.rtl {
+  direction: rtl;
+}
+
+body {
+  overflow-x: hidden;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !important;
+  line-height: 1.5714285714285714;
+  background: #ffffff;
+  -webkit-transition: background 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: background 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* overrride default dumi style */
+.dumi-default-doc-layout {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !important;
+}
