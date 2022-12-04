@@ -2,7 +2,6 @@
   "compilerOptions": {
     "strict": true,
     "declaration": true,
-    "skipLibCheck": true,
     "esModuleInterop": true,
     "jsx": "react",
     "baseUrl": "./",
@@ -10,6 +9,19 @@
       "@@/*": [".dumi/tmp/*"],
       "@utopia/react-design-core": ["src"],
       "@utopia/react-design-core/*": ["src/*", "*"]
-    }
+    },
+    "strictNullChecks": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "jsxFactory": "React.createElement",
+    "jsxFragmentFactory": "React.Fragment",
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "target": "es6",
+    "lib": ["dom", "es2017"],
+    "skipLibCheck": true,
+    "stripInternal": true
   }
 }
