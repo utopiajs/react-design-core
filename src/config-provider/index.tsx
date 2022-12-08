@@ -1,11 +1,10 @@
 import React, { type FC } from 'react';
 import { useMemo } from '../_util/useMemo';
 import { ConfigConsumer, ConfigConsumerProps, ConfigContext } from './context';
-
-export type SizeType = 'small' | 'middle' | 'large' | undefined;
+import SizeContext, { type SizeType, SizeContextProvider } from './SizeContent'
 
 export interface ConfigProviderProps {
-  sizeContext?: SizeType;
+  componentSize?: SizeType;
   prefixCls?: string;
   children?: React.ReactNode;
 }
@@ -17,7 +16,7 @@ interface ProviderChildrenProps extends ConfigProviderProps {
 }
 
 const ProviderChildren: React.FC<ProviderChildrenProps> = (props) => {
-  const { children, parentContext } = props;
+  const { children, parentContext, componentSize } = props;
   let childNode = children;
 
   const getPrefixCls = React.useCallback(
@@ -53,6 +52,11 @@ const ProviderChildren: React.FC<ProviderChildrenProps> = (props) => {
     },
   );
 
+  // component size
+  if(componentSize) {
+    childNode = <SizeContextProvider size={componentSize}>{childNode}</SizeContextProvider>
+  }
+
   return (
     <ConfigContext.Provider value={memoedConfig}>
       {childNode}
@@ -62,6 +66,7 @@ const ProviderChildren: React.FC<ProviderChildrenProps> = (props) => {
 
 const ConfigProvider: FC<ConfigProviderProps> & {
   ConfigContext: typeof ConfigContext;
+  SizeContext: typeof SizeContext;
 } = (props) => {
   return (
     <ConfigConsumer>
@@ -71,5 +76,6 @@ const ConfigProvider: FC<ConfigProviderProps> & {
 };
 
 ConfigProvider.ConfigContext = ConfigContext;
+ConfigProvider.SizeContext = SizeContext;
 
 export default ConfigProvider;
