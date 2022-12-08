@@ -1,7 +1,10 @@
 @import '../../style/theme/index.less';
+@import './mixin.less';
 
 @copy-right-prefix-cls: ~'@{core-prefix}-copy-right';
 
 .@{copy-right-prefix-cls} {
+  .copy-right();
+  
   color: @color-font-primary;
 }

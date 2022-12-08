@@ -25,3 +25,8 @@ export default () => (
   </ConfigProvider>
 );
 ```
+### API
+
+| 参数 | 说明 | 类型 | 默认值 | 版本 |
+| --- | --- | --- | --- | --- |
+| componentSize | 设置 antd 组件大小 | `small` \| `middle` \| `large` | - |  |

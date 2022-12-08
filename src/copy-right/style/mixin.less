@@ -1,0 +1,17 @@
+.copy-right-size(@font-size) {
+  font-size: @font-size;
+}
+
+.copy-right() {
+  &-lg {
+    .copy-right-size(
+      @font-size-lg;
+    );
+  }
+
+  &-sm {
+    .copy-right-size(
+      @font-size-sm;
+    );
+  }
+}
