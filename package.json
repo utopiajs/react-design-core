@@ -1,6 +1,6 @@
 {
   "name": "@utopia/react-design-core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "react library",
   "license": "MIT",
   "module": "dist/index.js",
