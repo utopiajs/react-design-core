@@ -17,7 +17,7 @@ const CopyRight: FC<CopyRightProps> = (props) => {
     prefixCls: customizePrefixCls,
     className,
     name = '',
-    size: customizeSize,
+    size: customizeSize
   } = props;
   const { getPrefixCls } = useContext(ConfigContext);
   const size = React.useContext(SizeContext);
@@ -32,7 +32,7 @@ const CopyRight: FC<CopyRightProps> = (props) => {
   const classes = classNames(
     prefixCls,
     { [`${prefixCls}-${sizeCls}`]: sizeCls },
-    className,
+    className
   );
   return <p className={classes}>{`©${new Date().getFullYear()} ${name}`}</p>;
 };

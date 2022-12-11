@@ -52,6 +52,7 @@
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
     "@umijs/lint": "^4.0.0",
+    "@utopia/eslint-config-react": "^0.0.5",
     "dumi": "2.0.13",
     "eslint": "^8.23.0",
     "father": "^4.1.0",
@@ -69,7 +70,8 @@
     "react-dom": ">=16.9.0"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "authors": [
     "KuangPF"
