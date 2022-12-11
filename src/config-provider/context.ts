@@ -6,7 +6,7 @@ export interface ConfigConsumerProps {
 
 const defaultGetPrefixCls = (
   suffixCls?: string,
-  customizePrefixCls?: string,
+  customizePrefixCls?: string
 ) => {
   if (customizePrefixCls) return customizePrefixCls;
 
@@ -14,7 +14,7 @@ const defaultGetPrefixCls = (
 };
 
 export const ConfigContext = React.createContext<ConfigConsumerProps>({
-  getPrefixCls: defaultGetPrefixCls,
+  getPrefixCls: defaultGetPrefixCls
 });
 
 export const ConfigConsumer = ConfigContext.Consumer;

@@ -5,10 +5,10 @@ interface Cache<Value, Condition> {
   value: Value;
 }
 
-export function useMemo<Value, Condition = any[]>(
+export function _useMemo<Value, Condition = any[]>(
   getValue: () => Value,
   condition: Condition,
-  shouldUpdate: (prev: Condition, next: Condition) => boolean,
+  shouldUpdate: (prev: Condition, next: Condition) => boolean
 ) {
   const cacheRef = React.useRef<Cache<Value, Condition>>({
     condition,

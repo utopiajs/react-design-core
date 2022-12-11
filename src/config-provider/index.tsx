@@ -1,7 +1,7 @@
 import React, { type FC } from 'react';
-import { useMemo } from '../_util/useMemo';
+import { _useMemo } from '../_util/useMemo';
 import { ConfigConsumer, ConfigConsumerProps, ConfigContext } from './context';
-import SizeContext, { type SizeType, SizeContextProvider } from './SizeContent'
+import SizeContext, { SizeContextProvider, type SizeType } from './SizeContent';
 
 export interface ConfigProviderProps {
   componentSize?: SizeType;
@@ -16,28 +16,32 @@ interface ProviderChildrenProps extends ConfigProviderProps {
 }
 
 const ProviderChildren: React.FC<ProviderChildrenProps> = (props) => {
-  const { children, parentContext, componentSize } = props;
+  const {
+    children,
+    parentContext,
+    parentContext: { getPrefixCls: _getPrefixCls },
+    componentSize,
+    prefixCls
+  } = props;
   let childNode = children;
 
   const getPrefixCls = React.useCallback(
     (suffixCls?: string, customizePrefixCls?: string) => {
-      const { prefixCls } = props;
-
       if (customizePrefixCls) return customizePrefixCls;
 
-      const mergedPrefixCls = prefixCls || parentContext.getPrefixCls('');
+      const mergedPrefixCls = prefixCls || _getPrefixCls('');
 
       return suffixCls ? `${mergedPrefixCls}-${suffixCls}` : mergedPrefixCls;
     },
-    [parentContext.getPrefixCls, props.prefixCls],
+    [_getPrefixCls, prefixCls]
   );
 
   const config = {
     ...parentContext,
-    getPrefixCls,
+    getPrefixCls
   };
 
-  const memoedConfig = useMemo(
+  const memoedConfig = _useMemo(
     () => config,
     config,
     (prevConfig, currentConfig) => {
@@ -49,12 +53,16 @@ const ProviderChildren: React.FC<ProviderChildrenProps> = (props) => {
         prevKeys.length !== currentKeys.length ||
         prevKeys.some((key) => prevConfig[key] !== currentConfig[key])
       );
-    },
+    }
   );
 
   // component size
-  if(componentSize) {
-    childNode = <SizeContextProvider size={componentSize}>{childNode}</SizeContextProvider>
+  if (componentSize) {
+    childNode = (
+      <SizeContextProvider size={componentSize}>
+        {childNode}
+      </SizeContextProvider>
+    );
   }
 
   return (

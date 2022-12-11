@@ -23,7 +23,11 @@ const CopyRight: FC<CopyRightProps> = (props) => {
   const size = React.useContext(SizeContext);
 
   // size
-  const sizeClassNameMap = { large: 'lg', small: 'sm', middle: undefined };
+  const sizeClassNameMap = {
+    large: 'lg',
+    small: 'sm',
+    middle: undefined
+  };
   const sizeFullname = customizeSize || size;
   const sizeCls = sizeFullname ? sizeClassNameMap[sizeFullname] || '' : '';
 
@@ -31,7 +35,9 @@ const CopyRight: FC<CopyRightProps> = (props) => {
 
   const classes = classNames(
     prefixCls,
-    { [`${prefixCls}-${sizeCls}`]: sizeCls },
+    {
+      [`${prefixCls}-${sizeCls}`]: sizeCls
+    },
     className
   );
   return <p className={classes}>{`©${new Date().getFullYear()} ${name}`}</p>;
