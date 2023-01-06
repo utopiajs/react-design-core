@@ -4,7 +4,24 @@ export default defineConfig({
   outputPath: 'docs-dist',
   themeConfig: {
     name: 'core',
-    footer: '<div>Made with <span style="color: rgb(255, 255, 255);">❤</span> by <a target="_blank" rel="noopener noreferrer" href="https://github.com/utopiajs">Utopia</a></div>'
+    antdTheme: {
+      github: 'https://github.com/utopiajs/react-design-core',
+      owner: 'KuangPF | Copyright © 2022-present',
+      sidebarGroupModePath: ['/components'],
+      title: 'React Design Core',
+      description: 'React 组件开发模板，开箱即用',
+      actions: [
+        {
+          type: 'primary',
+          text: '开始使用',
+          link: '/guide'
+        },
+        {
+          text: '组件',
+          link: '/components/copy-right'
+        }
+      ]
+    }
   },
   styles: ['/styles/reset.css']
 });
