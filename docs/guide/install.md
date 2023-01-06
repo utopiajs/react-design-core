@@ -5,6 +5,5 @@ nav:
 group:
   title: 基础
   order: 1
+title: 安装
 ---
-
-# 安装

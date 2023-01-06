@@ -5,6 +5,5 @@ nav:
 group:
   title: 基础
   order: 2
+title: 开发规范
 ---
-
-# 开发规范

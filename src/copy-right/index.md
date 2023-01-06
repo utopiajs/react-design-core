@@ -5,9 +5,8 @@ nav:
 group:
   title: 通用
   order: 1
+title: CopyRight
 ---
-
-# CopyRight
 
 用于展示版权信息
 
@@ -15,5 +14,5 @@ group:
 import React from 'react';
 import { CopyRight } from '@utopia/react-design-core';
 
-export default () => <CopyRight name="utopia" />
+export default () => <CopyRight name="utopia" />;
 ```

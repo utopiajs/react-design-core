@@ -5,9 +5,8 @@ nav:
 group:
   title: 其它
   order: 3
+title: ConfigProvider
 ---
-
-# ConfigProvider
 
 为组件提供统一的全局化配置。
 
