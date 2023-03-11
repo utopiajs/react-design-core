@@ -19,7 +19,10 @@ export default defineConfig({
         text: '组件',
         link: '/components/copy-right'
       }
-    ]
+    ],
+    docVersions: {
+      '0.0.2': ''
+    }
   },
   styles: ['/styles/reset.css']
 });
