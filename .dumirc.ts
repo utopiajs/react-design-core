@@ -5,7 +5,7 @@ export default defineConfig({
   themeConfig: {
     name: 'core',
     github: 'https://github.com/utopiajs/react-design-core',
-    owner: 'KuangPF | Copyright © 2022-present',
+    footer: '@utopia.space | Copyright © 2022-present',
     sidebarGroupModePath: ['/components'],
     title: 'React Design Core',
     description: 'React 组件开发模板，开箱即用',
@@ -20,6 +20,9 @@ export default defineConfig({
         link: '/components/copy-right'
       }
     ],
+    loading: {
+      skeleton: ['/guide', '/components']
+    },
     docVersions: {
       '0.0.2': ''
     }
