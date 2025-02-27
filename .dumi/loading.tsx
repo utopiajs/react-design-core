@@ -1,2 +1,2 @@
 /* .dumi/loading.tsx */
-export { default } from 'dumi-theme-antd/loading';
+export { Loading as default } from 'dumi-theme-antd';
